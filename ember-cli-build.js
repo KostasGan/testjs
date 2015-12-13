@@ -6,6 +6,29 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
+  app.import('bower_components/AdminLTE/dist/css/AdminLTE.min.css');
+  // Date Picker
+  app.import('bower_components/AdminLTE/plugins/datepicker/datepicker3.css');
+  // Daterange picker
+  app.import('bower_components/AdminLTE/plugins/daterangepicker/daterangepicker-bs3.css');
+  // AdminLTE All Skins
+  app.import('bower_components/AdminLTE/dist/css/skins/_all-skins.min.css');
+  // AdminLTE Skin
+  app.import('bower_components/AdminLTE/dist/css/skins/skin-black.min.css');
+  // iCheck
+  app.import('bower_components/AdminLTE/plugins/iCheck/flat/blue.css');
+
+  // Bootstrap
+  app.import('bower_components/AdminLTE/bootstrap/js/bootstrap.min.js');
+  // Datepicker
+  app.import('bower_components/AdminLTE/plugins/datepicker/bootstrap-datepicker.js');
+  // iCheck
+  app.import('bower_components/AdminLTE/plugins/iCheck/icheck.min.js');
+  // Slimscroll
+  app.import('bower_components/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js');
+  // Bootstrap WYSIHTML5
+  app.import('bower_components/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js');
+
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
