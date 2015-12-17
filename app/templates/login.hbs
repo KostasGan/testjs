@@ -4,22 +4,28 @@
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
-        <form action="../../index2.html" method="post">
+        <form {{action 'check' on="submit"}}>
           <div class="form-group has-feedback">
-            <input type="email" value="email" class="form-control" placeholder="Email">
+            {{input value=email class="form-control" placeholder="Email"}}
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" value= password class="form-control" placeholder="Password">
+            {{input type="password" value=pass class="form-control" placeholder="Password"}}
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="row">
             <div class="col-xs-8">
-              <a href="register.html" class="text-center">Register a new membership</a>
+              
+              {{#if logged}}
+                <p class="text-red"> Wrong username or pass! </p>
+              {{else}}
+                <a href="register.html" class="text-center">Register a new membership</a>
+              {{/if}}
             </div><!-- /.col -->
             <div class="col-xs-4">
-              {{#link-to 'main'}}<button {{action 'check'}}class="btn btn-primary btn-block btn-flat">Sign In</button>{{/link-to}}
+	            <button type= "submit"class="btn btn-primary btn-block btn-flat">Sign In</button>
             </div><!-- /.col -->
+            
           </div>
         </form>
 
