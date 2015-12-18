@@ -1,20 +1,23 @@
 import Ember from 'ember';
-import user from '../models/user';
+
 
 export default Ember.Controller.extend({	
 	logged:false,
-
+	//user1: Ember.computed.reads('UserController.model'),
 	actions:{
 		check: function(){
 
-			if((this.email === 'kostas') && (this.pass === 'kostas')){
-				//alert(this.user1.something);
+			if((this.get('email') === 'kostas') && (this.get('pass') === 'kostas')){
+				
+
 				this.transitionToRoute("main");
 			}
 			else{
-				
-				//this.set('logged', true);
+				this.set('logged', true);
 				//return this.logged;
+				
+				this.transitionToRoute("login");
+
 			}
 		}
 	}
