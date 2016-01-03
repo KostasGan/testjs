@@ -2,10 +2,12 @@ import DS from 'ember-data';
 
 var user = DS.Model.extend({
 
-username: DS.attr('string'),
+username: DS.attr('string', {defaultValue:'kostas'}),
 email: DS.attr('string'),
 password: DS.attr('string'),
-login:DS.belongsTo('login')
+logged:DS.attr('boolean')
+//login:DS.belongsTo('login'),
+//register:DS.belongsTo('register')
 
 });
 
