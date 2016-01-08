@@ -1,19 +1,20 @@
 import Ember from 'ember';
-import user from '../models/user';
 
 export default Ember.Controller.extend({	
 	logged:false,
-
 	actions:{
 		check: function(){
-			
-			//alert();
+			var user= this.store.peekRecord('user',1);
 
-			if((this.get('email') === 'kostas') && (this.get('pass') === 'kostas')){
+			//alert(this.get(username));
+
+			if((this.get('email') === user.get("username")) && (this.get('pass') === user.get("password"))){
+				user.set('id',0);
 				this.transitionToRoute("main");
 			}
 			else{
-				this.set('logged', true);
+				user.set('logged', true),
+				console.log(user.logged),
 				Ember.$('#error').fadeOut(1500);
 
 			}
