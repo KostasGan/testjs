@@ -14,6 +14,7 @@ export default Ember.Controller.extend({
 			else{
 				user.set('logged', true);
 				Ember.$('#error').fadeOut(1500);
+				alert('yolo');
 			}
 	
 		}
