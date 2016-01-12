@@ -6,3 +6,8 @@ h2{
 #error{
 	text-align: left;
 }
+
+.user-panel{
+		text-align: center;
+		color: white;
+}
