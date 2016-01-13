@@ -1,3 +1,4 @@
+{{#if model.logged}}
 <body class="hold-transition skin-blue sidebar-mini">
     <!-- Site wrapper -->
 
@@ -32,10 +33,10 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                      {{#link-to 'user'}}<a  class="btn btn-default btn-flat">Profile</a>{{/link-to}}
                     </div>
                     <div class="pull-right">
-                      {{#link-to 'login'}}<a class="btn btn-default btn-flat">Sign out</a>{{/link-to}}
+                      <a {{action 'signout'}} class="btn btn-default btn-flat">Sign out</a>
                     </div>
                   </li>
                 </ul>
@@ -91,11 +92,11 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Blank page
+            Home page
             <small>it all starts here</small>
           </h1>
           <ol class="breadcrumb">
-            <li> {{#link-to ''}} <a> <i class="fa fa-dashboard"></i> Home </a> {{/link-to}}</li>
+            <li> {{#link-to 'main'}} <a> <i class="fa fa-dashboard"></i> Home </a> {{/link-to}}</li>
             <li class="active"> {{#link-to 'main'}} <a>Dashboard</a> {{/link-to}} </li>
           </ol>
         </section>
@@ -134,7 +135,9 @@
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
       <div class="control-sidebar-bg"></div>
-
-
 </body>
+{{else}}
+  <p><b> You should login first!! For login click {{#link-to 'login'}}<a>here</a>{{/link-to}}</b></p>
+{{/if}}
+
 {{outlet}}
