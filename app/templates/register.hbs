@@ -5,7 +5,7 @@
 
       <div class="register-box-body">
         <p class="login-box-msg">Register a new membership</p>
-        <form  {{action 'check' on="post"}}>
+        <form  {{action 'register' on="submit"}}>
           <div class="form-group has-feedback">
             {{input type="text" value=fullname class="form-control" placeholder="Full name"}}
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -29,6 +29,11 @@
           <div class="row">
             <div class="col-xs-8">
               {{#link-to 'login'}} <a class="text-center"> I already have a membership </a> {{/link-to}}
+              <div id = "error">
+              {{#if isSame }}
+                  <p class="text-red" > Retype password and password arent same </p> 
+              {{/if}}
+              </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
               <button type="post" class="btn btn-primary btn-block btn-flat">Register</button>
