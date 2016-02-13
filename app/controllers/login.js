@@ -17,6 +17,8 @@ export default Ember.Controller.extend({
 				this.set('wrongCren',true);
 				Ember.$('#error').fadeOut(1500);
 
+
+
 			}
 	
 		}
