@@ -6,11 +6,12 @@ export default Ember.Controller.extend({
 	actions:{
 		check: function(){
 			
-			var user= this.store.peekRecord('user',1);
-
+			var user= this.get('model').findBy('username', this.get('email'));
+			//alert(user);
 			if((this.get('email') === user.get("username")) && (this.get('pass') === user.get("password"))){
 				user.set('logged',true);
 				this.set('wrongCren',false);
+				
 				this.transitionToRoute("main");
 			}
 			else{
