@@ -1,7 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+	
 	model:function(){
-		return this.store.peekRecord('user',1);
+		var user = this.store.peekAll('user');
+		user = user.findBy('logged',true);
+		return user;
+		
+
 	}
 });
