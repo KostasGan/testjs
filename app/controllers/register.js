@@ -8,15 +8,15 @@ export default Ember.Controller.extend({
 			register:function(){
 
 				if(this.get('pass') === this.get('confirm')){
-					this.store.createRecord('user',{
+					var newUser=this.store.createRecord('user',{
 						id:'2',
 						fullname: this.get('fullname'),
 						username: this.get('username'),
 						email: this.get('email'),
 						password: this.get('pass'),
-						logged: true
+						logged: false
 					})
-					//newUser.save();
+					newUser.save();
 					this.set('isSame',false);
 					this.transitionToRoute("login");
 
