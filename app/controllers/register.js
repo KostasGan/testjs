@@ -16,6 +16,7 @@ export default Ember.Controller.extend({
 						password: this.get('pass'),
 						logged: false
 					})
+					
 					newUser.save();
 					this.set('isSame',false);
 					this.transitionToRoute("login");
