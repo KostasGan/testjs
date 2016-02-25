@@ -24,14 +24,24 @@
               {{/link-to}}
             </li>
 
-            <li class="treeview"> 
-              {{#link-to 'main'}}
-                <i class="fa fa-dashboard"></i> <span>Admin</span> <i class="fa fa-angle-left pull-right"></i>
-              {{/link-to}}
+            <li class="treeview">
+              <a>
+                <i class="fa fa-share"></i> <span>Admin</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="dropdown-toggle">
+                <li>
+                  <li><a href="#"><i class="fa fa-circle-o"></i> Invitations <i class="fa fa-angle-left pull-right"></i></a> </li>
+                  
+                  <li><a href="#"><i class="fa fa-circle-o"></i> Contacts</a></li>
+                  
+                  <li><a href="#"><i class="fa fa-circle-o"></i> Seeder</a></li>
+                </li>
+              </ul>
             </li>
 
             <li class="treeview"> 
-              {{#link-to 'main'}}
+              {{#link-to 'main.contact'}}
                 <i class="fa fa-dashboard"></i> <span>Contact</span> <i class="fa fa-angle-left pull-right"></i>
               {{/link-to}}
             </li>
