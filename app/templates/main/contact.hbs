@@ -1,5 +1,6 @@
 <div class="content-wrapper">
-
+  <div class="box yellow">
+ 
   	<!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -7,9 +8,16 @@
       <small>Lets us know about your problems</small>
       </h1>
     </section>
-
+  
     <div class="box-body">
+    {{#if EmailSent}}
 
+      <div class="container">
+        <h1 class="text-green">Your email sent successful!</h1>
+        <p >Thank you for contacting with the development team. Your feedback is very important to us. We'll see your suggestion and will make the right changes. </p>
+      </div>
+
+    {{else}}
         <form role="form">
             <!-- text input -->
             <div class="form-group has-feedback">
@@ -26,9 +34,11 @@
             </div>
 
             <div class="col-md-1">
-              <button  class="btn btn-primary btn-block" disabled={{isNotValid}}>Submit</button>
+              <button  class="btn btn-primary btn-block" {{action 'SendEmail'}} disabled={{isNotValid}}>Submit</button>
             </div><!-- /.col -->          
         </form>
+    {{/if}}
     </div><!-- /.box-body -->
+    </div>
 </div>
 {{outlet}}

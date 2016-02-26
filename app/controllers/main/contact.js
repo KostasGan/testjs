@@ -8,5 +8,13 @@ export default Ember.Controller.extend({
 
 	FormValidated: Ember.computed.and('isValidEmail','isMessageMaxChars'),
 
-	isNotValid: Ember.computed.not('FormValidated')
+	isNotValid: Ember.computed.not('FormValidated'),
+
+	EmailSent:false,
+
+	actions:{
+		SendEmail:function() {
+			this.set("EmailSent",true);
+		}
+	}
 });
