@@ -1,62 +1,10 @@
 
 <body class="hold-transition skin-blue sidebar-mini">
-    <!-- Site wrapper -->
-
-      <header class="main-header">
-        <!-- Logo -->
-        <a class="logo">
-          <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Ember</b>CLI</span>
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-          <!-- Sidebar toggle button-->
-          
-          <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-              <ul class="nav navbar-nav navbar-right">
-                <li>{{#link-to profile}}<span class="glyphicon glyphicon-user"></span> {{model.fullname}}{{/link-to}}</li>
-                <li><a {{action 'signout'}}><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-              </ul>
-              
-            </ul>
-          </div>
-        </nav>
-      </header>
-
+    
+      {{partial 'nav-bar'}}
       <!-- =============================================== -->
 
-      <!-- Left side column. contains the sidebar -->
-      <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-        
-          <!-- Sidebar user panel -->
-          <div class="user-panel">
-				<b>{{model.fullname}}</b>
-          </div>
-          <!-- search form -->
-          <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-              </span>
-            </div>
-          </form>
-          <!-- /.search form -->
-          <!-- sidebar menu: : style can be found in sidebar.less -->
-          <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
-            <li class="treeview">
-              {{#link-to 'main'}}<a >
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>{{/link-to}}
-            </li>       
-          </ul>
-        </section>
-        <!-- /.sidebar -->
-      </aside>
+      {{partial 'nav-Menu'}}
 
       <!-- =============================================== -->
 
@@ -68,10 +16,6 @@
             User Profile
             <small>Change your info</small>
           </h1>
-          <ol class="breadcrumb">
-            <li> {{#link-to 'main'}} <a> <i class="fa fa-dashboard"></i> Home </a> {{/link-to}}</li>
-            <li class="active"> {{#link-to 'main'}} <a>Dashboard</a> {{/link-to}} </li>
-          </ol>
         </section>
 
         <!-- Main content -->
