@@ -1,0 +1,23 @@
+ <!-- Site wrapper -->
+      <header class="main-header">
+        <!-- Logo -->
+        <a class="logo">
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Ember</b>CLI</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+  
+              <ul class="nav navbar-nav navbar-right">
+                <li>{{#link-to 'user'}}<span class="glyphicon glyphicon-user"></span> {{model.fullname}}{{/link-to}}</li>
+                <li><a {{action 'signout'}}><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+              </ul>
+
+            </ul>
+          </div>
+        </nav>
+      </header>
