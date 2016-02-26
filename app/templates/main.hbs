@@ -1,31 +1,9 @@
 <body class="hold-transition skin-blue sidebar-mini">
-    <!-- Site wrapper -->
-      <header class="main-header">
-        <!-- Logo -->
-        <a class="logo">
-          <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Ember</b>CLI</span>
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-          <!-- Sidebar toggle button-->
-          
-          <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-  
-              <ul class="nav navbar-nav navbar-right">
-                <li>{{#link-to 'user'}}<span class="glyphicon glyphicon-user"></span> {{model.fullname}}{{/link-to}}</li>
-                <li><a {{action 'signout'}}><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-              </ul>
-
-            </ul>
-          </div>
-        </nav>
-      </header>
-
+    
+      {{partial 'nav-bar'}}
       <!-- =============================================== -->
 
-        {{partial 'nav-Menu'}}
+      {{partial 'nav-Menu'}}
         
       <!-- =============================================== -->
 
@@ -38,10 +16,7 @@
             Ember Tutorial Project
             <small>it all starts here</small>
           </h1>
-          <ol class="breadcrumb">
-            <li> {{#link-to 'main'}} <a> <i class="fa fa-dashboard"></i> Home </a> {{/link-to}}</li>
-            <li class="active"> {{#link-to 'main'}} <a>Dashboard</a> {{/link-to}} </li>
-          </ol>
+          
 
         </section>
       </div><!-- /.content-wrapper -->
