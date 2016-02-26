@@ -14,6 +14,9 @@ Router.map(function() {
   this.route('register');
   this.route('user',{ path:'/profile'});
 
+  this.route('admin', function() {
+    this.route('invitations');
+  });
 });
 
 
