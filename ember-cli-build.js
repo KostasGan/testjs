@@ -6,6 +6,8 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
+  app.import('bower_components/AdminLTE/bootstrap/css/bootstrap.min.css');
+
   app.import('bower_components/AdminLTE/dist/css/AdminLTE.min.css');
   // Date Picker
   app.import('bower_components/AdminLTE/plugins/datepicker/datepicker3.css');
