@@ -11,3 +11,14 @@ h2{
 		text-align: center;
 		color: white;
 }
+table{
+	border-collapse: collapse;
+	border: 3px solid;
+
+}
+
+thead{
+	border-top: 3px solid #C0C0C0;
+   	border-bottom: 3px solid #C0C0C0;
+   
+}
