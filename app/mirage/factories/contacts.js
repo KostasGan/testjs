@@ -6,10 +6,9 @@
 import Mirage/*, {faker} */ from 'ember-cli-mirage';
 
 export default Mirage.Factory.extend({
-
-
-  
-
+  id:1,
+  email: 'kostas@kostas.gr',
+  message: 'Hello world',
   // name: 'Pete',                         // strings
   // age: 20,                              // numbers
   // tall: true,                           // booleans
