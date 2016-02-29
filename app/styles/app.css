@@ -22,3 +22,15 @@ thead{
    	border-bottom: 3px solid #C0C0C0;
    
 }
+
+#lib-nav{
+	background-color: #ecf0f5;
+
+}
+
+.well{
+	background-color: white;
+}
+.content-wrapper{
+	background-color: #ecf0f5;
+}
