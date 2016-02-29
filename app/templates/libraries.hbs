@@ -1,26 +1,27 @@
 <body class="hold-transition skin-blue sidebar-mini">
-    
-      {{partial 'nav-bar'}}
-      <!-- =============================================== -->
+  {{partial 'nav-bar'}}
+  <!-- =============================================== -->
+  {{partial 'nav-Menu'}}  
+  <!-- =============================================== -->
 
-      {{partial 'nav-Menu'}}
-        
-      <!-- =============================================== -->
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Libraries 
+        <small>All about Libraries</small>
+      </h1>
+    </section>
 
-      <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
+    <div class="well well-sm">
+      <ul id="lib-nav" class="nav nav-tabs">
+        <li>{{#link-to 'libraries.index'}}<a> List All </a>{{/link-to}}</li>
 
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <h1>
-            Libraries 
-            <small>All about Libraries</small>
-          </h1>
-          
-
-        </section>
-      </div><!-- /.content-wrapper -->
-      
-      
+        <li>{{#link-to 'libraries.edit'}}<a> Edit </a>{{/link-to}}</li>
+      </ul>
+    </div>
+  </div><!-- /.content-wrapper -->
+         
 </body>
 {{outlet}}
