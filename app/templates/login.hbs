@@ -19,7 +19,7 @@
               {{#link-to 'register' }} <a class="text-center"> Register a new membership </a> {{/link-to}}
               <div id = "error">
               {{#if wrongCren }}
-                  <p class="text-red" > Wrong username or pass! </p> 
+                  <p class="text-red" > {{errorMessage}} </p> 
               {{/if}}
             </div> 
           </div><!-- /.col -->
