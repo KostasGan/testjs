@@ -7,7 +7,7 @@ username: DS.attr('string'),
 email: DS.attr('string'),
 password: DS.attr('string'),
 logged: DS.attr('boolean'),
-contacts: DS.hasMany('contact')
+//contacts: DS.hasMany('contact')
 //login:DS.belongsTo('login'),
 //register:DS.belongsTo('register')
 
