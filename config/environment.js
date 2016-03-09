@@ -4,6 +4,11 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'testjs',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://glowing-fire-6140.firebaseio.com/',
+    torii: {
+      sessionServiceName: 'session'
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
