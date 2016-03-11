@@ -6,6 +6,7 @@ export default Ember.Controller.extend({
 	
 	actions:{
 		check:function(){
+
       var email = this.get('email');
       var password = this.get('pass');
       
@@ -16,8 +17,7 @@ export default Ember.Controller.extend({
       }).then(()=>{
 
         this.set('wrongCren',false);
-        var user = this.store.find('user', this.get('session.uid'));
-        this.get('sessionUser').retrievedUser(user);
+        this.get('sessionUser').retrievedUser(this.get('session.uid'));
         this.transitionToRoute("main");
 
       }).catch((error)=>{
