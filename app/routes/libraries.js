@@ -5,5 +5,11 @@ export default Ember.Route.extend({
     	if(Ember.isEmpty(Cookies.get('userID'))){
       		this.transitionTo('login');
     	}
-  	}
+  	},
+  	actions:{
+		signout:function(){
+			this.get('sessionUser').logoutUser(this.get('session.uid'));
+			this.transitionTo('login');
+		}
+	}
 });
