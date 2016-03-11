@@ -1,7 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	model:function(){
-		return this.store.peekRecord('user',1);
-	}
+	beforeModel: function(){
+    	if(Ember.isEmpty(Cookies.get('userID'))){
+      		this.transitionTo('login');
+    	}
+  	}
+	
 });
