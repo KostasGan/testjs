@@ -20,6 +20,7 @@ Router.map(function() {
   });
   this.route('libraries', function() {
     this.route('edit');
+    this.route('new');
   });
 });
 
