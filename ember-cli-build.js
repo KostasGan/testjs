@@ -30,7 +30,8 @@ module.exports = function(defaults) {
   app.import('bower_components/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js');
   // Bootstrap WYSIHTML5
   app.import('bower_components/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js');
-
+  // js-cookie
+  app.import('bower_components/js-cookie/src/js.cookie.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
