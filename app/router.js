@@ -19,7 +19,7 @@ Router.map(function() {
     this.route('contacts');
   });
   this.route('libraries', function() {
-    this.route('edit');
+    this.route('edit',{path:'/:library_id/edit'});
     this.route('new');
   });
 });
