@@ -6,15 +6,31 @@
       </h1>
     </section>
 
-    {{#each model as |library|}}
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">{{library.name}}</h3>
-        </div>
-        <div class="panel-body">
-            <p>Address: {{library.address}}</p>
-            <p>Phone: {{library.phone}}</p>
-        </div>
+    <div id='table'>
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each model as |library| }}
+            <tr>
+              <td>{{library.id}}</td>
+              <td>{{library.name}}</td>
+              <td>{{library.address}}</td>
+              <td>{{library.phone}}</td>
+              <td>
+                {{#link-to 'libraries.edit' library.id class="btn btn-success btn-xs"}}Edit{{/link-to}}
+                <button type="submit" class="btn btn-danger btn-xs"{{action 'deleteLibrary' library}}>Delete</button>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
     </div>
-{{/each}}
 </div><!-- /.content-wrapper -->
